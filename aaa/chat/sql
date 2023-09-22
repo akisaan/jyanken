@@ -1,0 +1,8 @@
+CREATE TABLE player_stats (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    player_name VARCHAR(255) NOT NULL,
+    win_count INT DEFAULT 0,
+    lose_count INT DEFAULT 0,
+    draw_count INT DEFAULT 0,
+    rating FLOAT DEFAULT 1.0
+);

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ジャンケンゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>じゃんけん</h1>
+    
+    <!-- 結果を表示 -->
+    <h2>戦績</h2>
+    <ul>
+        {% for result in results %}
+            <li>{{ result[1] }}: {{ result[2] }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- 結果の送信フォーム -->
+    <h2>結果を追加</h2>
+    <form method="POST" action="/add_result">
+        <label for="player_name">プレイヤー名:</label>
+        <input type="text" name="player_name" id="player_name">
+        <label for="result">結果:</label>
+        <input type="text" name="result" id="result">
+        <input type="submit" value="送信">
+    </form>
+
+</body>
+</html>

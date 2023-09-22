@@ -5,9 +5,11 @@ $dsn = "mysql:host=localhost; dbname=xxx; charset=utf8";
 $username = "xxx";
 $password = "xxx";
 try {
-    $dbh = new PDO($dsn, $username, $password);
+    $dbh = new PDO('mysql:host=localhost;dbname=your_database_name', 'your_username', 'your_password');
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    $msg = $e->getMessage();
+    echo 'データベース接続エラー: ' . $e->getMessage();
+    die();
 }
 
 $sql = "SELECT * FROM users WHERE mail = :mail";

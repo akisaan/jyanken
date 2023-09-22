@@ -94,3 +94,30 @@ document.getElementById("resetButton").addEventListener("click", () => {
     updateScore();
     updateRate();
 });
+// ジャンケンの結果をサーバーに送信して保存
+function saveResult(player_name, win_count, lose_count, draw_count, rating) {
+    fetch('/saveResult', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ player_name, win_count, lose_count, draw_count, rating }),
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data); // レスポンスメッセージをコンソールに表示
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+// ジャンケンの結果がわかったらデータベースに保存
+function recordResult(player_name, win_count, lose_count, draw_count, rating) {
+    // 結果をサーバーに送信
+    saveResult(player_name, win_count, lose_count, draw_count, rating);
+}
+
+// ジャンケンの結果を処理してデータベースに保存するロジックを追加
+// ...
+
