@@ -1,8 +1,19 @@
-CREATE TABLE player_stats (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    player_name VARCHAR(255) NOT NULL,
-    win_count INT DEFAULT 0,
-    lose_count INT DEFAULT 0,
-    draw_count INT DEFAULT 0,
-    rating FLOAT DEFAULT 1.0
+-- CREATE TABLE player_stats (
+--     id INT AUTO_INCREMENT PRIMARY KEY,
+--     player_name VARCHAR(255) NOT NULL,
+--     win_count INT DEFAULT 0,
+--     lose_count INT DEFAULT 0,
+--     draw_count INT DEFAULT 0,
+--     rating FLOAT DEFAULT 1.0
+-- );
+drop database if exists kadai;
+create database kadai default character set utf8 collate utf8_general_ci;
+grant all on kadai.* to 'staff'@'localhost' identified by 'password';
+use kadai;
+/* 顧客情報 */ 
+create table customer (
+    id int auto_increment primary key,      
+    name varchar(100) not null unique,                     
+    password varchar(100) not null          
 );
+
