@@ -1,16 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新規登録画面</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<div id="registerForm">
+
     <h1>新規登録</h1>
-    <textarea>プレイヤー名</textarea>
-    <textarea>パスワード</textarea>
-    <br>
-    <button><a href="janken.html">登録</button>
-</body>
-</html>
+  
+    <label for="name">名前</label>
+  <input type="text" id="name">
+  
+    <label for="password">パスワード</label>
+  <input type="password" id="password">
+  
+    <label for="passwordConfirm">パスワード(確認)</label>
+  <input type="password" id="passwordConfirm">
+    <button type="button" id="registerBtn">登録する</button>
+  
+    <p>
+      既にアカウントをお持ちの場合は<a href="#">こちら</a>からログイン  
+  </p>
+
+  </div>
+
+  <style>
+    /* style rules */
+  </style>
+  
+  <script>
+    // 登録ボタンクリック時の処理
+    document.getElementById('registerBtn').addEventListener('click', () => {
+      // 登録API呼び出し等
+    });
+  </script>
