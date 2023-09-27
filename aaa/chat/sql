@@ -14,6 +14,6 @@ use kadai;
 create table customer (
     id int auto_increment primary key,      
     name varchar(100) not null unique,                     
-    password varchar(100) not null          
+    password varchar(10) not null          
 );
 
