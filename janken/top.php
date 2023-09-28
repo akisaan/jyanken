@@ -39,7 +39,7 @@
     <h1>ジャンケンシステム</h1>
         <a href="maezawa.php"><img src="janken.jpg" width="120" height="120"></a> 
         <a href="mypage.php"><img src="mypage.png" width="120" height="120"></a> 
-        <a href="logout.php"><img src="logout.png" width="120" height="120"></a> 
+        <a href="menu\logout.php"><img src="menu\logout.png" width="120" height="120"></a> 
     </div>
 
 
