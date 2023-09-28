@@ -1,4 +1,4 @@
-body {
+/* body {
     text-align: center;
     font-family: Arial, sans-serif;
     background-color: darkgray;
@@ -62,4 +62,28 @@ nav li a {
 .right {
     float: right;
 }
-}
+} */
+<style>
+        /* スタイリング */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .buttons button {
+            font-size: 18px;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
