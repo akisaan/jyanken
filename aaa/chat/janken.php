@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ナビゲーションバーを追加 -->
     <nav>
         <ul>
             <li class="right"><a href="mypage.html">マイページ</a></li>
@@ -26,7 +25,6 @@
         <p>負け: <span id="loseCount">0</span></p>
         <p>引き分け: <span id="drawCount">0</span></p>
     </div>
-    <!-- レートを表示する要素を追加 -->
     <div id="rateDisplay">
         <h2>レート</h2>
         <p>レート: <span id="rate">1.0</span></p>

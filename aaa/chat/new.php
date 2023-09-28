@@ -9,7 +9,6 @@
       <form action="login.php" method="post">
         <input type="hidden" name="command" value="regist">
         <input type="text" class="form-control" placeholder="Login Name" name="name" required/>
-        <input type="tel" class="form-control" placeholder="Phone Number" name="phone_number" required/>
         <input type="password" class="form-control" placeholder="Password" name="password" required/>
         <input type="password" class="form-control" placeholder="Confirm Password" name="confirm_password" required/>
         
@@ -19,6 +18,5 @@
             </button>
         </div>
       </form>
-<!-- end book section -->
 
 <?php require 'footer.php'; ?>
