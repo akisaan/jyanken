@@ -104,9 +104,6 @@ if (isset($_POST['reset'])) {
             </div>
         </form>
         <p><?php echo $result; ?></p>
-        <form method="post">
-            <button type="submit" name="reset">リセット</button>
-        </form>
     </div>
 </body>
 </html>
