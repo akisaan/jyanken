@@ -1,70 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <link rel="stylesheet" href="style.css">
+
     <meta charset="UTF-8">
-    <title>後澤jaiけんゲーム_トップページ</title>
-    <style>
-        /* スタイリング */
-        .h1{
-            /* margin-left: auto;
-            margin-right: auto; */
-            text-align: center;
-        }
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .buttons button {
-            font-size: 18px;
-            padding: 15px 30px;
-            margin: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .buttons button:hover {
-            background-color: #45a049;
-        }
-        .custom-button {
-            display: inline-block;
-            padding: 10px 20px; /* ボタン内の余白を調整します */
-            background-color: #0074d9; /* ボタンの背景色を設定します */
-            color: #ffffff; /* ボタンのテキスト色を設定します */
-            font-size: 16px; /* ボタンのテキストのフォントサイズを設定します */
-            border: none; /* ボタンの境界線を削除します */
-            border-radius: 5px; /* ボタンの角を丸めます */
-            cursor: pointer; /* カーソルをポインターに変更します */
-            text-decoration: none; /* リンクの下線を削除します */
-            margin: 5px; /* ボタン間の余白を設定します */
-        }
-
-        .custom-button:hover {
-            background-color: #0056b3; /* ホバー時の背景色を設定します */
-        }
-
-    </style>
+    <title>後澤jaiけんゲーム</title>
 </head>
 <body>
-    <!-- <div class="container">
-    <h1>ジャンケンシステム</h1>
-        <a href="game.php">ジャンケンする</a>
-        <a href="mypage.php">マイページ</a> 
-        <a href="logout.php">ログアウト</a> 
-    </div> -->
     <div class="container">
-    <h1>ジャンケンシステム</h1>
-    <button class="custom-button" onclick="location.href='game.php'">ジャンケンする</button>
-    <button class="custom-button" onclick="location.href='mypage.php'">マイページ</button>
-    <button class="custom-button" onclick="location.href='logout.php'">ログアウト</button>
+        <h1>後澤jaiけん</h1>
+        <p id="money">所持金: 0円</p>
+        <div class="buttons">
+            <button onclick="playGame('rock')">グー</button>
+            <button onclick="playGame('scissors')">チョキ</button>
+            <button onclick="playGame('paper')">パー</button>
+            
+        </div>
+        <p id="result"></p>
+
+        <!-- 追加: 続けますか？ -->
+        <div id="continueSection" style="display: none;">
+            <p>続けますか？</p>
+            <button onclick="continueGame(true)">はい</button>
+            <button onclick="continueGame(false)">いいえ</button>
+        </div>
     </div>
-
-
 
     <script>
         <?php

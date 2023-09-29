@@ -1,0 +1,46 @@
+<div id="loginForm">
+
+    <h1>ログイン</h1>
+ 
+    <label for="password">パスワード</label>
+    <input type="password" id="password" name="password">
+    <button type="button" id="loginBtn">ログイン</button>
+
+    <p>
+      アカウントをお持ちでない場合は<a href="#">こちら</a>から新規登録
+    </p>
+ 
+  </div>
+  <style>
+
+    #loginForm {
+      width: 300px;
+      margin: 0 auto;
+      padding: 30px;
+      border: 1px solid #ddd;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+    }
+
+    #loginBtn {
+      width: 100%;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      border: none;
+    }
+  </style>
+  <script>
+    // ログインボタンクリック時の処理
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      // ログインAPI呼び出し等の処理
+    });
+  </script>
